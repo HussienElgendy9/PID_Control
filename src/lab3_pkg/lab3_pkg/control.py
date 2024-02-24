@@ -28,9 +28,9 @@ class control(Node):
 
     def control(self):
         #relative_velocity = self.odom_linear_velocity
-            current_time = time.time() #chat gpt
-            dt = current_time - self.prev_time #chat gpt
-            self.prev_time = current_time #chat gpt
+            current_time = time.time() 
+            dt = current_time - self.prev_time 
+            self.prev_time = current_time 
             d_error = (self.error-self.prev_error)/dt
             self.prev_error = self.error
 

@@ -27,12 +27,12 @@ class distFinder(Node):
         self.angle_increment = data.angle_increment * (180.0 / np.pi)
         self.range = data.ranges
         # Calculate the index corresponding to the given angle theta
-        index = int((theta - self.angle_min) / self.angle_increment)#chat gpt
+        index = int((theta - self.angle_min) / self.angle_increment)
 
         # Return the distance at the calculated index
         self.get_logger().info(f"index = {index}, the length of the array = {len(self.range)}, the min angle = {self.angle_min},the angle increment = {self.angle_increment} and the max angle = {self.angle_max}")
         if index<= len(self.range):
-            return self.range[index]#chat gpt
+            return self.range[index]
         else:
             return 0.0
 
